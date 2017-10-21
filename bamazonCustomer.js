@@ -64,10 +64,10 @@ function checkQty() {
             var newQty = parseInt(res[0].stock_quantity) - parseInt(qtySelected);
             postItem(itemSelected, newQty);
         } else {
-            console.log("\nSorry, there isn't enough stock to complete this order.\n")
+            console.log("\nInsufficient Quantity!\n")
         }
         listAllItems();
-        endConnect();
+        setTimeout(endConnect,1000);
     });
 
 }
